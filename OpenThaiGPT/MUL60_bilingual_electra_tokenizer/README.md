@@ -55,15 +55,23 @@ Definition of done:
 
 4. What did you learn from this project 
     4.1 You learnt about hydra (using config file) (no hardcoding anymore)
-        - using hydra 
-        - ./ refer to the current directory 
-        - ../ refer to the above directory ex. in MUL60_bilingual_electra_tokenizer/sirasit/preprocess_part/configfolder/config.yaml and MUL60_bilingual_electra_tokenizer/sirasit/preprocess_part/preprocess.py
-        - from ...(file) import ...(function from other file) you can see many example in this folder
-        - avoid running by run symbol, you should use command python ...(name of file) ex. python train.py instead (due to relative path error)
+        4.1.1 using hydra 
+        4.1.2 ./ refer to the current directory 
+        4.1.3 ../ refer to the above directory ex. in MUL60_bilingual_electra_tokenizer/sirasit/preprocess_part/configfolder/config.yaml and MUL60_bilingual_electra_tokenizer/sirasit/preprocess_part/preprocess.py
+        4.1.4 from ...(file) import ...(function from other file) you can see many example in this folder
+        4.1.5 avoid running by run symbol, you should use command python ...(name of file) ex. python train.py instead (due to relative path error)
     4.2 You know more about using virtual machine
-        - what slurm file is -> output file
-        - submit.sh -> how to run backend node (sbatch submit.sh), myqueue, sbalance, ...
-        - how to list env (conda env list), create , activate, deactivate, ... (https://openthaigpt.gitbook.io/openthaigpt-guideline/lanta/slurm)
+        4.2.1 what slurm file is -> output file (output of running)
+        4.2.2 submit.sh -> how to run backend node (sbatch submit.sh), myqueue, sbalance, ...
+        4.2.3 how to list env (conda env list), create , activate, deactivate, ... (https://openthaigpt.gitbook.io/openthaigpt-guideline/lanta/slurm)
+        4.2.4 method of using lanta (https://openthaigpt.gitbook.io/openthaigpt-guideline/lanta/python-environments-in-slurm)
+            - ml Miniconda3
+            - conda env list and conda activate ... (your env) (or create new env)
+            - Navigate to the directory containing the submit.sh file. Remember to specify your preferred file within submit.sh before running it 
+            - run it by command sbatch submit.sh
+            - you will get something like Submitted batch job 775043, you can use myqueue to see the detail
+            - open the link for more information ex. kill the process, etc. 
+           
     
 
 
