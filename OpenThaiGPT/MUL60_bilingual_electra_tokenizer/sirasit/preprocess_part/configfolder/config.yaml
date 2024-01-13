@@ -1,0 +1,5 @@
+input_directory_path: ../../HF_V6_Colassal_deduplicated_128_09_decontaminated_128_03_blinded_json/train
+output_directory_path: ./HF_V6_Colassal_deduplicated_128_09_decontaminated_128_03_blinded_json_preprocess/train
+sample_fraction: 1.00
+seed: 42
+visualize_directory_path: ./HF_V6_Colassal_deduplicated_128_09_decontaminated_128_03_blinded_json_preprocess/eval

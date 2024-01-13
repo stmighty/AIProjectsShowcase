@@ -1,0 +1,8 @@
+train_directory_path: ../preprocess_part/HF_V6_Colassal_deduplicated_128_09_decontaminated_128_03_blinded_json_preprocess/train
+output_path: ./model_output
+vocab_size: 15000
+vocab_file_name: spm_tokenizer2
+model_file_name: spm_tokenizer2.model
+jsonl_load_all: true # Set to false if loading a specific number of files
+jsonl_num_files: 2 # Ignored if jsonl_load_all is true
+train_mode: "bpe"   #unigram (default), bpe, char, or word     # https://github.com/google/sentencepiece#train-sentencepiece-model
