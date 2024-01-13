@@ -71,6 +71,8 @@ Definition of done:
             - run it by command sbatch submit.sh
             - you will get something like Submitted batch job 775043, you can use myqueue to see the detail
             - open the link for more information ex. kill the process, etc. 
+            
+    4.3 fundamental of read/write text and json/jsonl file
            
     
 
