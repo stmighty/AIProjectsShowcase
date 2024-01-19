@@ -36,26 +36,26 @@ Definition of done:
             - input directory (of the original data)
             - output directory (of the preprocesded data)
 
-        2.2.2 MUL60_bilingual_electra_tokenizer/sirasit/preprocess_part/HF_V6_Colassal_deduplicated_128_09_decontaminated_128_03_blinded_json_preprocess :
-        Here is the output folder after preprocessing
-
-        2.2.3 MUL60_bilingual_electra_tokenizer/sirasit/preprocess_part/create_jsonl_folder.py :
-        used in preprocess.py
-
-        2.2.4 MUL60_bilingual_electra_tokenizer/sirasit/preprocess_part/wangchanberta_preprocess.py :
-        used in preprocess.py
-
-        2.2.5 MUL60_bilingual_electra_tokenizer/sirasit/preprocess_part/visualize.py :
-        Here is just visualize.py file
-
-        2.2.6 MUL60_bilingual_electra_tokenizer/sirasit/preprocess_part/preprocess.py :
+        2.2.2 MUL60_bilingual_electra_tokenizer/sirasit/preprocess_part/preprocess.py :
         Here is the main file (script to run)
+
+        2.2.3 MUL60_bilingual_electra_tokenizer/sirasit/preprocess_part/HF_V6_Colassal_deduplicated_128_09_decontaminated_128_03_blinded_json_preprocess :
+        Here is the output folder after preprocessing (preprocessed data, we will use this folder to train tokenizer)
+
+        2.2.4 MUL60_bilingual_electra_tokenizer/sirasit/preprocess_part/create_jsonl_folder.py :
+        used in preprocess.py
+
+        2.2.5 MUL60_bilingual_electra_tokenizer/sirasit/preprocess_part/wangchanberta_preprocess.py :
+        used in preprocess.py
+
+        2.2.6 MUL60_bilingual_electra_tokenizer/sirasit/preprocess_part/visualize.py :
+        Here is just visualize file
 
         2.2.7 MUL60_bilingual_electra_tokenizer/sirasit/preprocess_part/outputs/2024-01-13 :
         not sure what is this folder
 
         2.2.8 MUL60_bilingual_electra_tokenizer/sirasit/preprocess_part/submit.sh :
-        used only if you use cloud computing part (lanta)
+        used only if you use cloud computing part (lanta), you can run by cd to the directory of this file and run sbatch submit.sh
 
     2.3 MUL60_bilingual_electra_tokenizer/sirasit/train_spm_tokenizer -> 
     after finish 1.2 (preprocess data) we have the new folder(which is preprocessed) (MUL60_bilingual_electra_tokenizer/sirasit/preprocess_part/HF_V6_Colassal_deduplicated_128_09_decontaminated_128_03_blinded_json_preprocess) we need to train the tokenizer following https://github.com/OpenThaiGPT/openthaigpt-pretraining/tree/main/src/model/scripts/spm_training. However this code has an error at --model_type (there is not spm model_type according to https://github.com/google/sentencepiece) so we use bpe instead.
@@ -69,11 +69,11 @@ Definition of done:
             - model_file_name
             - train_mode (https://github.com/google/sentencepiece#train-sentencepiece-model)
 
-        2.3.2 MUL60_bilingual_electra_tokenizer/sirasit/train_spm_tokenizer/spm_trainer.py :
-        used in train.py
-
-        2.3.3 MUL60_bilingual_electra_tokenizer/sirasit/train_spm_tokenizer/train.py :
+        2.3.2 MUL60_bilingual_electra_tokenizer/sirasit/train_spm_tokenizer/train.py :
         this is the main part (script to run)
+
+        2.3.3 MUL60_bilingual_electra_tokenizer/sirasit/train_spm_tokenizer/spm_trainer.py :
+        used in train.py
 
         2.3.4 MUL60_bilingual_electra_tokenizer/sirasit/train_spm_tokenizer/model_output :
         this is the output of tokenizer model there are many vocab_size folder in here.
@@ -82,7 +82,7 @@ Definition of done:
         this is just visualize file.
 
         2.3.6 MUL60_bilingual_electra_tokenizer/sirasit/train_spm_tokenizer/submit.sh :
-        used only if you use cloud computing part (lanta)
+        used only if you use cloud computing part (lanta), you can run by cd to the directory of this file and run sbatch submit.sh
         
 
 
@@ -133,12 +133,10 @@ Definition of done:
            
     
 
-
-
 6. Disclaimer 
     6.1 There are only 5 jsonl files in training data as an example. In the real VM, there are many thousands file, so the result you get from training on your local will be worse.
     6.2 Moreover, I will not add those files in git due to the size problem.
     6.3 If you have any questions, search on your local machine /Users/sirasittanrattanawong/Downloads/AIProjectsShowcase/OpenThaiGPT/MUL60_bilingual_electra_tokenizer
 
-7. latest update 17/1/24 
+7. latest update 19/1/24 
 
