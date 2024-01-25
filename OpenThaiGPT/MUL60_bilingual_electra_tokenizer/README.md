@@ -114,6 +114,11 @@ Definition of done:
         5.1.1 using hydra 
         5.1.2 ./ refer to the current directory 
         5.1.3 ../ refer to the above directory ex. in MUL60_bilingual_electra_tokenizer/sirasit/preprocess_part/configfolder/config.yaml and MUL60_bilingual_electra_tokenizer/sirasit/preprocess_part/preprocess.py
+
+        example 
+        However, when running via command line it if you run at sbatch exp/export.sh and in export.sh it run sth like python ../script/export.py
+                                    the result is differ from   sbatch export.sh (you cd to exp) it depends on the path you run command not the file
+
         5.1.4 from ...(file) import ...(function from other file) you can see many example in this folder
         5.1.5 avoid running by run symbol, you should use command python ...(name of file) ex. python train.py instead (due to relative path error)
     5.2 You know more about using virtual machine
